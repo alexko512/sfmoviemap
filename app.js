@@ -12,8 +12,8 @@ var searchRouter = require('./routes/search')
 var app = express();
 
 //Set up mongoose connection
-var connString = process.env.MONGODB_URI;
-mongoose.connect(connString, { useNewUrlParser: true , dbName: "db"});
+var connString = MONGODB_URI;
+mongoose.connect(connString, {  useUnifiedTopology: true, useNewUrlParser: true , dbName: "db"});
 var dataConn = mongoose.connection;
 mongoose.Promise = global.Promise;
 dataConn.on('error', console.error.bind(console, 'MongoDB connection error:'));
