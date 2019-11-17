@@ -8,8 +8,7 @@ function cleardemo() {
 function initMap() {
         map = new google.maps.Map(document.getElementById('map'), {
           center: {lat: 37.751585, lng: -122.443353},
-          zoom: 12,
-          mapTypeId: 'hybrid'
+          zoom: 12
         });
       };
 
