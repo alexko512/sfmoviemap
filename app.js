@@ -12,7 +12,7 @@ var searchRouter = require('./routes/search')
 var app = express();
 
 //Set up mongoose connection
-var connString = MONGODB_URI;
+var connString = ENV['MONGODB_URI'];
 mongoose.connect(connString, {  useUnifiedTopology: true, useNewUrlParser: true , dbName: "db"});
 var dataConn = mongoose.connection;
 mongoose.Promise = global.Promise;
