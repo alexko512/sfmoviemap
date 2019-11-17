@@ -15,6 +15,7 @@ var app = express();
 var connString = process.env.MONGODB_URI;
 mongoose.connect(connString, { useNewUrlParser: true , dbName: "db"});
 var dataConn = mongoose.connection;
+mongoose.Promise = global.Promise;
 dataConn.on('error', console.error.bind(console, 'MongoDB connection error:'));
 dataConn.once('open', () => console.log('Connected to Database'));
 
