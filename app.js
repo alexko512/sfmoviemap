@@ -13,7 +13,7 @@ var app = express();
 
 //Set up mongoose connection
 var connString = process.env.MONGODB_URI;
-mongoose.connect(connString, { useUnifiedTopology: true, useNewUrlParser: true , dbName: "db"});
+mongoose.connect(connString, { useNewUrlParser: true , dbName: "db"});
 var dataConn = mongoose.connection;
 dataConn.on('error', console.error.bind(console, 'MongoDB connection error:'));
 dataConn.once('open', () => console.log('Connected to Database'));
