@@ -1,0 +1,1 @@
+eb: ./bin/www npm start
